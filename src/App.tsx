@@ -35,11 +35,11 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false);
 
-  const toggleExpand = (id) => {
+  const toggleExpand = (id: number) => {
     setPosts(posts.map(p => p.id === id ? { ...p, expanded: !p.expanded } : p));
   };
 
-  const handleLike = (id) => {
+  const handleLike = (id: number) => {
     setPosts(posts.map(p => p.id === id ? { ...p, likes: p.likes + 1 } : p));
   };
 
